@@ -1,3 +1,4 @@
+
 CREATE TABLE bodegas (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL
@@ -28,8 +29,13 @@ CREATE TABLE productos (
     fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+--Datos de prueba
 
-
-INSERT INTO bodegas (nombre) VALUES ('Bodega 1'), ('Bodega 2');
-INSERT INTO sucursales (nombre, bodega_id) VALUES ('Sucursal 1', 1), ('Sucursal 2', 1), ('Sucursal 3', 2);
+INSERT INTO bodegas (nombre) VALUES ('Bodega A'), ('Bodega B');
 INSERT INTO monedas (nombre, simbolo) VALUES ('DÓLAR', '$'), ('EURO', '€');
+
+INSERT INTO sucursales (nombre, bodega_id) 
+VALUES 
+    ('Sucursal 1', 1), 
+    ('Sucursal 2', 1), 
+    ('Sucursal 3', 2);
